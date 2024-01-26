@@ -1,6 +1,8 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { IoMdClose } from "react-icons/io";
 
+// A modal is a component that displays in front of the page and deactivates all other element.
+// Here I create the properties for our modals
 interface ModalProps {
     isOpen: boolean;
     onChange: (open:boolean) => void;
@@ -9,6 +11,7 @@ interface ModalProps {
     children: React.ReactNode;
 }
 
+// Here I design what our default modal will look like
 const Modal: React.FC<ModalProps> = ({isOpen, onChange, title, description, children}) => {
     return (
         <Dialog.Root
